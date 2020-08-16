@@ -1,0 +1,98 @@
+<!DOCTYPE <!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Shopping Cart</title>
+        <meta name="description" content="A Shopping cart built with VanillaJS">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./ASSETS/style.css">
+        <script src="./ASSETS/app.js" async defer></script>
+    </head>
+    <body>
+        <nav></nav>
+        <main id="container">
+            <h1 class="products-title">PRODUCTS</h1>
+            <section class="products">
+                <div class="product-item">
+                    <div class="title">Handbag</div>
+                    <div class="img-ctn"><img src="./ASSETS/images/handbag.jpg" class="img"></div>
+                    <div class="cart-flex">
+                        <div class="price">$10.00</div>
+                        <button class="add-to-cart-btn">Add to cart</button>
+                    </div>
+
+                </div>
+
+                <div class="product-item">
+                    <div class="title">Ladies' shoes</div>
+                    <div class="img-ctn"><img src="./ASSETS/images/shoes.jpg" class="img"></div>
+                    <div class="cart-flex">
+                        <div class="price">$15.00</div>
+                        <button class="add-to-cart-btn">Add to cart</button>
+                    </div>
+                </div>
+
+                <div class="product-item">
+                    <div class="title">Adidas shoes</div>
+                    <div class="img-ctn"><img src="./ASSETS/images/adidas Kaptir shoes.jpg" alt="adidas kaptir women's shoes" class="img"></div>
+                    <div class="cart-flex">
+                        <div class="price">$25.48</div>
+                        <button class="add-to-cart-btn">Add to cart</button>
+                    </div>
+                </div>
+
+                <div class="product-item">
+                    <div class="title">Men's jacket</div>
+                    <div class="img-ctn"><img src="./ASSETS/images/Jacket.jpg" alt="men's jacket" class="img" ></div>
+                    <div class="cart-flex">
+                        <div class="price">$8.50</div>
+                        <button class="add-to-cart-btn">Add to cart</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="cart">
+                <div class="cart-title">CART</div>
+                <div class="row-heading">
+                    <div class="item-heading">Item</div>
+                    <div class="item-price">Price</div>
+                    <div class="item-quantity">Quantity</div>
+                </div>
+                <div class="cart-content">
+                    
+                    <div class="cart-item-row">
+                        <div class="cart-item">
+                            <img src="./ASSETS/images/handbag.jpg" alt="Ladies' handbag" class="cart-item-img">
+                            <p class="cart-item-title">Handbag</p>
+                        </div>
+                        <div class="cart-item-price">
+                            <p>$10.00</p>
+                        </div>
+                        <div class="cart-item-quantity">
+                            <input type="number" value="1" class="item-quantity-input">
+                            
+                            <button class="remove-item-btn">REMOVE</button>
+                        </div>
+                    </div>
+                    <div class="cart-item-row">
+                        <div class="cart-item">
+                            <img src="./ASSETS/images/Jacket.jpg" alt="men's jacket" class="cart-item-img">
+                            <p class="cart-item-title">Men's Jacket</p>
+                        </div>
+                        <div class="cart-item-price">
+                            <p>$8.50</p>
+                        </div>
+                        <div class="cart-item-quantity">
+                            <input type="number" value="1" class="item-quantity-input">
+                            <button class="remove-item-btn">REMOVE</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="cart-total">
+                    <div class="cart-total-heading">TOTAL</div>
+                    <div class="cart-total-price"></div>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>
