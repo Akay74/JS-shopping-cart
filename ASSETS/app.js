@@ -1,21 +1,23 @@
 /*remove items from cart*/
-const removeButton = document.getElementsByClassName('remove-item-btn');
-for (let i = 0; i < removeButton.length; i++) {
-    let button = removeButton[i];
-    button.addEventListener('click', removeCartItem)
-    
+function removeCartRow() {
+    const removeButton = document.getElementsByClassName('remove-item-btn')
+    for (let i = 0; i < removeButton.length; i++) {
+        let button = removeButton[i];
+        button.addEventListener('click', removeCartItem)
+        
+    }
 }
 
 function removeCartItem(event) {
     let buttonActive = event.target
     buttonActive.parentElement.parentElement.remove()
-    console.log('clicked');
-    cartTotalPrice();
+    console.log('clicked')
+    cartTotalPrice()
 }
 
 /*update cart price*/
 function cartTotalPrice() {
-    const itemRow = document.getElementsByClassName('cart-item-row');
+    const itemRow = document.getElementsByClassName('cart-item-row')
     let total = 0;
     for (let i = 0; i < itemRow.length; i++) {
         let itemRows = itemRow[i];
@@ -76,4 +78,6 @@ function addProductToCart(itemTitle, productPrice, imgSrc){
         </div>`
         cartRow.innerHTML = cartRowContents
     cartContent.append(cartRow)
+    removeCartRow()
+    cartTotalPrice()
 }
