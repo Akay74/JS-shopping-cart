@@ -27,7 +27,7 @@ function cartTotalPrice() {
         let quantity = itemQuantity.value
         total = total + (price * quantity)
     }
-    document.getElementsByClassName('cart-total-price')[0].innerText = '$' + total
+    document.getElementsByClassName('cart-total-price')[0].innerText = '$' + total.toFixed(2)
 }
 
 const itemQuantityInput = document.getElementsByClassName('item-quantity-input')
@@ -41,9 +41,9 @@ function inputQuantityChanged(event) {
     if (isNaN(inputQuantity.value) || input.value <= 0) {
         inputQuantity.value = 1
     }
-    cartTotalPrice()
 }
 
+/*add items to cart*/
 const addToCartBtn = document.getElementsByClassName('add-to-cart-btn')
 for (let i = 0; i < addToCartBtn.length; i++) {
     const cartButton = addToCartBtn [i];
